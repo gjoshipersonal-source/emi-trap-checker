@@ -1,23 +1,12 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
-
-export const metadata: Metadata = {
-  title: "EMI Trap Checker",
-  description: "Scan your EMI reality",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <h1 className="text-4xl font-bold">EMI Trap Checker</h1>
+        <p className="text-center sm:text-left">
+          Scan your EMI reality
+        </p>
+      </main>
+    </div>
   );
 }
